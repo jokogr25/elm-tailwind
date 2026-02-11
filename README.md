@@ -20,3 +20,22 @@ The content of `tailwind.css`:
 ```css
 @import "tailwindcss";
 ```
+
+`src/index.js` needs to be
+```js
+import { Elm } from "./Main.elm";
+
+Elm.Main.init(
+    {
+        node: document.getElementById("elm")
+    }
+);
+```
+
+and before the closing `</body>` in `index.html`
+
+```html
+<div id="elm"></div>
+
+<script type="module" src="index.js"></script>
+```
